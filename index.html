@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Bennett - Software Developer & Security Specialist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .section-active {
+            border-bottom: 2px solid #1e40af;
+            color: #1e40af;
+        }
+        .nav-item {
+            transition: all 0.3s ease;
+            padding-bottom: 0.5rem;
+            margin-bottom: -2px;
+        }
+        .nav-item:hover {
+            border-bottom: 2px solid #93c5fd;
+            color: #1e40af;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .skill-category {
+            transition: transform 0.3s ease;
+        }
+        .skill-category:hover {
+            transform: scale(1.03);
+        }
+        .contact-link {
+            transition: all 0.3s ease;
+        }
+        .contact-link:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white py-8 shadow-sm">
+        <div class="container mx-auto px-4 md:px-6 flex flex-col items-center">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="mb-6 md:mb-0 md:mr-8">
+                    <img src="/api/placeholder/150/150" alt="Michael Bennett" class="rounded-full w-36 h-36 border-4 border-gray-200 shadow-lg" style="object-fit: cover;">
+                </div>
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl font-bold text-gray-800">Michael Bennett</h1>
+                    <h2 class="text-2xl text-blue-600 font-semibold mt-2">Software Developer & Security Specialist</h2>
+                    <p class="text-gray-600 mt-2"><i class="fas fa-map-marker-alt mr-2"></i>Hyattsville, MD</p>
+                    <p class="text-gray-600 italic mt-1">From Executive Chef to Code Craftsman</p>
+                    
+                    <div class="flex justify-center md:justify-start space-x-4 mt-4">
+                        <a href="#" class="rounded-full bg-gray-100 p-3 hover:bg-blue-100 transition-colors duration-300" title="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-blue-700">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="rounded-full bg-gray-100 p-3 hover:bg-blue-100 transition-colors duration-300" title="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-blue-700">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="rounded-full bg-gray-100 p-3 hover:bg-blue-100 transition-colors duration-300" title="Resume">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#" class="rounded-full bg-gray-100 p-3 hover:bg-blue-100 transition-colors duration-300" title="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#" class="rounded-full bg-gray-100 p-3 hover:bg-blue-100 transition-colors duration-300" title="Phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-700">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="flex justify-center md:justify-start space-x-8 overflow-x-auto whitespace-nowrap">
+                <li><a href="#about" class="nav-item section-active text-blue-700 font-medium">About</a></li>
+                <li><a href="#experience" class="nav-item text-gray-600 font-medium">Experience</a></li>
+                <li><a href="#education" class="nav-item text-gray-600 font-medium">Education</a></li>
+                <li><a href="#skills" class="nav-item text-gray-600 font-medium">Skills</a></li>
+                <li><a href="#projects" class="nav-item text-gray-600 font-medium">Projects</a></li>
+                <li><a href="#contact" class="nav-item text-gray-600 font-medium">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- About Section -->
+        <section id="about" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-700 text-center mb-8">About Me</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <p class="text-gray-700 text-lg text-center mb-6">
+                    Software Developer and Security Specialist leveraging 10+ years of leadership experience 
+                    from a successful culinary career, seeking blockchain, cybersecurity, or full-stack development opportunities.
+                </p>
+                <p class="text-gray-700 mb-6">
+                    My unique background combines technical expertise from my BS in Software Development & Security 
+                    with operational excellence managing high-pressure environments and cross-functional teams. I 
+                    approach coding challenges with the same precision, efficiency, and problem-solving mindset that drove 
+                    my culinary success.
+                </p>
+                
+                <h3 class="text-2xl font-semibold text-center mb-6">Core Competencies:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-blue-700 mb-2"><i class="fas fa-shield-alt text-2xl"></i></div>
+                        <h4 class="font-semibold">Cybersecurity & Secure Development</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-blue-700 mb-2"><i class="fas fa-layer-group text-2xl"></i></div>
+                        <h4 class="font-semibold">Full Stack Development</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-blue-700 mb-2"><i class="fas fa-link text-2xl"></i></div>
+                        <h4 class="font-semibold">Blockchain Technology</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-blue-700 mb-2"><i class="fas fa-brain text-2xl"></i></div>
+                        <h4 class="font-semibold">AI & Machine Learning</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-blue-700 mb-2"><i class="fas fa-users text-2xl"></i></div>
+                        <h4 class="font-semibold">Team Leadership</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-blue-700 mb-2"><i class="fas fa-chart-line text-2xl"></i></div>
+                        <h4 class="font-semibold">Process Optimization</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-700 text-center mb-8">Professional Experience</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <!-- Job 1 -->
+                <div class="mb-8">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Independent Technology Consultant</h3>
+                            <p class="text-gray-600">Self-employed</p>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                2020 - Present
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Developed personal projects to build practical experience in software development</li>
+                        <li>Created automated solutions for small business inventory management</li>
+                        <li>Designed and implemented custom database solutions for resource tracking</li>
+                        <li>Built secure web applications focusing on data protection and best practices</li>
+                    </ul>
+                </div>
+                
+                <!-- Job 2 -->
+                <div>
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Executive Chef & Kitchen Operations Manager</h3>
+                            <p class="text-gray-600">The Passenger</p>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                2018 - 2019
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Developed inventory tracking systems reducing waste by 15%</li>
+                        <li>Managed team scheduling and resource allocation using data-driven decision making</li>
+                        <li>Designed systematic workflows ensuring consistent quality delivery</li>
+                        <li>Conducted regular data analysis of costs and sales trends</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-700 text-center mb-8">Education</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <!-- Degree 1 -->
+                <div class="mb-8">
+                    <div class="flex items-center mb-4">
+                        <div class="text-blue-700 mr-4">
+                            <i class="fas fa-graduation-cap text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold">Bachelor of Science</h3>
+                            <p class="text-gray-700">Software Development and Security</p>
+                            <p class="text-gray-600">University of Maryland Global Campus</p>
+                            <p class="text-gray-600">Graduated May 2024 | GPA: 3.053</p>
+                        </div>
+                    </div>
+                    <div class="ml-12">
+                        <h4 class="font-semibold mb-2">Key Achievements:</h4>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            <li>Straight A's in all technical courses for final three semesters</li>
+                            <li>Excellence in advanced security and software development</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Degree 2 -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="text-blue-700 mr-4">
+                            <i class="fas fa-university text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold">Associate of Science</h3>
+                            <p class="text-gray-700">Health Science</p>
+                            <p class="text-gray-600">SUNY Broome Community College</p>
+                            <p class="text-gray-600">2011-2014</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-700 text-center mb-8">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Programming -->
+                <div class="bg-white rounded-lg shadow-md p-6 skill-category">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-blue-100 rounded-full mb-2">
+                            <i class="fas fa-code text-blue-700 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Programming</h3>
+                    </div>
+                    <p class="text-gray-700 text-center">
+                        Python JavaScript SQL HTML/CSS TypeScript
+                    </p>
+                </div>
+                
+                <!-- Security -->
+                <div class="bg-white rounded-lg shadow-md p-6 skill-category">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-blue-100 rounded-full mb-2">
+                            <i class="fas fa-shield-alt text-blue-700 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Security</h3>
+                    </div>
+                    <p class="text-gray-700 text-center">
+                        Network Security Vulnerability Assessment Risk Management Secure Coding
+                    </p>
+                </div>
+                
+                <!-- Blockchain/Web3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 skill-category">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-blue-100 rounded-full mb-2">
+                            <i class="fas fa-link text-blue-700 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Blockchain/Web3</h3>
+                    </div>
+                    <p class="text-gray-700 text-center">
+                        Smart Contracts Cryptocurrency NFT Infrastructure
+                    </p>
+                </div>
+                
+                <!-- AI/ML -->
+                <div class="bg-white rounded-lg shadow-md p-6 skill-category">
+                    <div class="text-center mb-4">
+                        <div class="inline-block p-3 bg-blue-100 rounded-full mb-2">
+                            <i class="fas fa-brain text-blue-700 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">AI/ML</h3>
+                    </div>
+                    <p class="text-gray-700 text-center">
+                        AI Agents Swarm Intelligence Machine Learning Hugging Face Transformers
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="mb-12">
+            <h2 class="text-3xl font-bold text-blue-700 text-center mb-8">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">AI Model Development</h3>
+                        <p class="text-gray-600 mb-2">Hugging Face</p>
+                        <p class="text-gray-700 mb-4">
+                            Exploring and developing machine learning models using Hugging Face's transformers library and model hub.
+                        </p>
+                        <div class="text-gray-600 font-medium mb-4">AI ML Python Transformers</div>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+                            <li>Implemented custom ML models</li>
+                            <li>Explored transformer architectures</li>
+                            <li>Published models on Hugging Face Hub</li>
+                        </ul>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            View on Hugging Face
+                            <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Secure Cloud Application</h3>
+                        <p class="text-gray-600 mb-2">SDEV 400</p>
+                        <p class="text-gray-700 mb-4">
+                            Cloud-based application implementing secure database integration and best practices in cloud security.
+                        </p>
+                        <div class="text-gray-600 font-medium mb-4">Cloud Security Database</div>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            <li>Implemented secure data protection measures</li>
+                            <li>Deployed automated testing procedures</li>
+                            <li>Achieved optimal performance metrics</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Vulnerability Analysis System</h3>
+                        <p class="text-gray-600 mb-2">SDEV 325</p>
+                        <p class="text-gray-700 mb-4">
+                            Comprehensive framework for security assessment and vulnerability mitigation.
+                        </p>
+                        <div class="text-gray-600 font-medium mb-4">Security Analysis Python</div>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            <li>Created assessment framework</li>
+                            <li>Implemented testing strategies</li>
+                            <li>Documented security protocols</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">View All Projects</a>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="text-3xl font-bold text-blue-700 text-center mb-8">Let's Connect</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <p class="text-gray-700 text-center mb-8">
+                    I'm currently open to new opportunities in software development and security. Let's discuss how my unique background can benefit your team.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <a href="mailto:mikebennett637@gmail.com" class="contact-link bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center hover:border-blue-300 hover:shadow-md transition-all duration-300">
+                        <div class="bg-blue-100 text-blue-700 rounded-full p-3 mb-3">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Email</h3>
+                        <p class="text-gray-700 text-center">mikebennett637@gmail.com</p>
+                    </a>
+                    
+                    <a href="tel:+12406598286" class="contact-link bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center hover:border-blue-300 hover:shadow-md transition-all duration-300">
+                        <div class="bg-blue-100 text-blue-700 rounded-full p-3 mb-3">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                        <p class="text-gray-700 text-center">(240) 659-8286</p>
+                    </a>
+                    
+                    <a href="#" class="contact-link bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center hover:border-blue-300 hover:shadow-md transition-all duration-300">
+                        <div class="bg-blue-100 text-blue-700 rounded-full p-3 mb-3">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+                        <p class="text-gray-700 text-center">Connect with me</p>
+                    </a>
+                    
+                    <a href="#" class="contact-link bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center hover:border-blue-300 hover:shadow-md transition-all duration-300">
+                        <div class="bg-blue-100 text-blue-700 rounded-full p-3 mb-3">
+                            <i class="fab fa-github text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">GitHub</h3>
+                        <p class="text-gray-700 text-center">View my code</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Michael Bennett. All rights reserved.</p>
+            <p class="mt-2 text-blue-200">
+                <a href="https://github.com/mbennett-labs" class="hover:text-white transition-colors duration-300">https://github.com/mbennett-labs</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple navigation highlighting
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            // On scroll, highlight the corresponding nav item
+            window.addEventListener('scroll', () => {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navItems.forEach(item => {
+                    item.classList.remove('section-active', 'text-blue-700');
+                    item.classList.add('text-gray-600');
+                    if (item.getAttribute('href').substring(1) === current) {
+                        item.classList.add('section-active', 'text-blue-700');
+                        item.classList.remove('text-gray-600');
+                    }
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            navItems.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
